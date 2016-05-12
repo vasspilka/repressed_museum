@@ -1,10 +1,11 @@
+require_relative '../../spec_helper'
 RSpec.describe MessageRepository do
-  let(:message) { MessageRepository.create(title: "Repressed Idea", text: "World is blind") }
+  let(:m)       { Message.new(title: "Repressed Idea", text: "World is blind") }
+  let(:message) { MessageRepository.create(m) }
 
   describe "message creation" do
-    it "has attributes" do
-      expect(message.title).to eq "Repressed Idea"
-      expect(message.text).to  eq "World is blind"
+    it "was created" do
+      expect(message).not_to eq nil
     end
   end
 end
