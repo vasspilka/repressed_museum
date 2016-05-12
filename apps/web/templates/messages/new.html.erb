@@ -1,0 +1,19 @@
+<%=
+  form_for :message, '/messages' do
+
+    div class: 'input' do
+      label      :title
+      text_field :title
+    end
+
+    div class: 'input' do
+      label      :text
+      text_field :text
+    end
+
+    div class: 'controls' do
+      submit 'Στείλε αποθημένο'
+    end
+
+  end
+%>
