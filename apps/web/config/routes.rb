@@ -1,7 +1,9 @@
-get '/messages/new', to: 'messages#new'
-post '/messages', to: 'messages#create'
+get '/',         to: 'home#index'
+get '/about',    to: 'home#about'
+get '/archieve', to: 'home#archieve'
 
-get '/home', to: 'home#index'
-get '/', to: 'home#index'
+post '/messages',  to: 'messages#create'
+get '/repress',    to: 'messages#repress'
+
 # Configure your routes here
 # See: http://www.rubydoc.info/gems/hanami-router/#Usage

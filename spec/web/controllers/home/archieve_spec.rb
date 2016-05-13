@@ -1,6 +1,6 @@
-require_relative '../../../../apps/web/controllers/messages/new'
+require_relative '../../../../apps/web/controllers/home/archieve'
 
-RSpec.describe Web::Controllers::Messages::New do
+RSpec.describe Web::Controllers::Home::Archieve do
   let(:action) { described_class.new }
   let(:params) { Hash[] }
 

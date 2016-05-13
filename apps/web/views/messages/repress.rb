@@ -1,5 +1,5 @@
 module Web::Views::Messages
-  class New
+  class Repress
     include Web::View
   end
 end
