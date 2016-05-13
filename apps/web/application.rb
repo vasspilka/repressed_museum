@@ -30,7 +30,6 @@ module Web
 
       # URI scheme used by the routing system to generate absolute URLs
       # Defaults to "http"
-      #
       # scheme 'https'
 
       # host 'example.org'
@@ -39,7 +38,6 @@ module Web
       # Enable cookies
       # Argument: boolean to toggle the feature
       #           A Hash with options
-      #
       # Options: :domain   - The domain (String - nil by default, not required)
       #          :path     - Restrict cookies to a relative URI (String - nil by default)
       #          :max_age  - Cookies expiration expressed in seconds (Integer - nil by default)
@@ -49,8 +47,6 @@ module Web
       #          :httponly - Prevent JavaScript access (Boolean - true by default)
       #
       # cookies true
-      # or
-      # cookies max_age: 300
 
       # Enable sessions
       # Argument: Symbol the Rack session adapter
@@ -59,18 +55,7 @@ module Web
       # sessions :cookie, secret: ENV['WEB_SESSIONS_SECRET']
 
       # Configure Rack middleware for this application
-      #
       # middleware.use Rack::Protection
-
-      # Default format for the requests that don't specify an HTTP_ACCEPT header
-      # Argument: A symbol representation of a mime type, default to :html
-      #
-      # default_request_format :html
-
-      # Default format for responses that doesn't take into account the request format
-      # Argument: A symbol representation of a mime type, default to :html
-      #
-      # default_response_format :html
 
       # HTTP Body parsers
       # Parse non GET responses body for a specific mime type
@@ -84,47 +69,14 @@ module Web
       #
       # force_ssl true
 
-      ##
-      # TEMPLATES
-      #
 
-      # The layout to be used by all views
-      #
       layout :application # It will load Web::Views::ApplicationLayout
-
-      # The relative path to templates
-      #
       templates 'templates'
 
-      ##
-      # ASSETS
-      #
       assets do
         # compile false
-        #
-        # Supported engines:
-        #
-        #   * :builtin
-        #   * :uglifier
-        #   * :yui
-        #   * :closure
-        #
-        # See: http://hanamirb.org/guides/assets/compressors
-        #
-        # In order to skip JavaScript compression comment the following line
         javascript_compressor :builtin
 
-        # Stylesheet compressor
-        #
-        # Supported engines:
-        #
-        #   * :builtin
-        #   * :yui
-        #   * :sass
-        #
-        # See: http://hanamirb.org/guides/assets/compressors
-        #
-        # In order to skip stylesheet compression comment the following line
         stylesheet_compressor :builtin
 
         # Specify sources for assets
@@ -136,61 +88,9 @@ module Web
 
       ##
       # SECURITY
-      #
-
-      # X-Frame-Options is a HTTP header supported by modern browsers.
-      # It determines if a web page can or cannot be included via <frame> and
-      # <iframe> tags by untrusted domains.
-      #
-      # Web applications can send this header to prevent Clickjacking attacks.
-      #
-      # Read more at:
-      #
-      #   * https://developer.mozilla.org/en-US/docs/Web/HTTP/X-Frame-Options
-      #   * https://www.owasp.org/index.php/Clickjacking
-      #
       security.x_frame_options "DENY"
-
-      # Content-Security-Policy (CSP) is a HTTP header supported by modern browsers.
-      # It determines trusted sources of execution for dynamic contents
-      # (JavaScript) or other web related assets: stylesheets, images, fonts,
-      # plugins, etc.
-      #
-      # Web applications can send this header to mitigate Cross Site Scripting
-      # (XSS) attacks.
-      #
-      # The default value allows images, scripts, AJAX, fonts and CSS from the same
-      # origin, and does not allow any other resources to load (eg object,
-      # frame, media, etc).
-      #
-      # Inline JavaScript is NOT allowed. To enable it, please use:
-      # "script-src 'unsafe-inline'".
-      #
-      # Content Security Policy introduction:
-      #
-      #  * http://www.html5rocks.com/en/tutorials/security/content-security-policy/
-      #  * https://www.owasp.org/index.php/Content_Security_Policy
-      #  * https://www.owasp.org/index.php/Cross-site_Scripting_%28XSS%29
-      #
-      # Inline and eval JavaScript risks:
-      #
-      #   * http://www.html5rocks.com/en/tutorials/security/content-security-policy/#inline-code-considered-harmful
-      #   * http://www.html5rocks.com/en/tutorials/security/content-security-policy/#eval-too
-      #
-      # Content Security Policy usage:
-      #
-      #  * http://content-security-policy.com/
-      #  * https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Using_Content_Security_Policy
-      #
       security.content_security_policy "default-src 'none'; script-src 'self'; connect-src 'self'; img-src 'self'; style-src 'self'; font-src 'self';"
 
-      ##
-      # FRAMEWORKS
-      #
-
-      # Configure the code that will yield each time Web::Action is included
-      # This is useful for sharing common functionality
-      #
       # See: http://www.rubydoc.info/gems/hanami-controller#Configuration
       controller.prepare do
         # include MyAuthentication # included in all the actions
@@ -207,25 +107,16 @@ module Web
       end
     end
 
-    ##
-    # DEVELOPMENT
-    #
     configure :development do
       # Don't handle exceptions, render the stack trace
       handle_exceptions false
     end
 
-    ##
-    # TEST
-    #
     configure :test do
       # Don't handle exceptions, render the stack trace
       handle_exceptions false
     end
 
-    ##
-    # PRODUCTION
-    #
     configure :production do
       # scheme 'https'
       # host   'example.org'

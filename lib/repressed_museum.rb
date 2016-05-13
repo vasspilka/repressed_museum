@@ -18,14 +18,9 @@ Hanami::Model.configure do
   #
   adapter type: :sql, uri: ENV['REPRESSED_MUSEUM_DATABASE_URL']
 
-  # Migrations
   migrations 'db/migrations'
   schema     'db/schema.sql'
 
-  ##
-  # Database mapping
-  # Intended for specifying application wide mappings.
-  # You can specify mapping file to load with:
   mapping "#{__dir__}/config/mapping"
 
 end.load!
