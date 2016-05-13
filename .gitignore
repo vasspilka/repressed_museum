@@ -1,3 +1,4 @@
 /public/assets*
 /tmp
 /db/repressed_museum_development.sqlite
+/db/repressed_museum_test.sqlite
