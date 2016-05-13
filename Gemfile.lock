@@ -102,6 +102,7 @@ DEPENDENCIES
   bundler
   capybara
   hanami (= 0.7.2)
+  hanami-assets
   hanami-model (~> 0.5)
   pry
   rake

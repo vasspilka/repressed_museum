@@ -1,18 +1,18 @@
 <%=
   form_for :message, '/messages' do
 
-    div class: 'input' do
-      label      :title
-      text_field :title
-    end
-
-    div class: 'input' do
-      label      :text
-      text_field :text
+    div class: 'controls' do
+      label      :title, class: 'label'
+      text_field :title, class: 'input'
     end
 
     div class: 'controls' do
-      submit 'Στείλε αποθημένο'
+      label      :text, class: 'label'
+      text_area  :text, class: 'input'
+    end
+
+    div class: 'controls' do
+      submit 'Στείλε αποθημένο', class: 'button'
     end
 
   end

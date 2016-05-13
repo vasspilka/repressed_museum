@@ -2,9 +2,26 @@
 <html>
   <head>
     <title>Το Μουσείο Απωθημένων</title>
+    <%= stylesheet 'bulma' %>
     <%= favicon %>
   </head>
   <body>
-    <%= yield %>
+    <header>
+      <nav class="nav has-shadow">
+        <div class="container">
+          <div class="nav-left">
+            <a href="/" class="nav-item is-tab">LOREM</a>
+          </div>
+          <div class="nav-center">
+            <a href="/about" class="nav-item is-tab">Για το Μουσείο</a>
+            <a href="/archieve" class="nav-item is-tab">Φωτογραφικό Αρχείο</a>
+            <a href="/repress" class="nav-item is-tab">Κατάθεση Απωθημένων</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>

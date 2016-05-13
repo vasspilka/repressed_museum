@@ -4,13 +4,9 @@ require 'hanami/assets'
 module Web
   class Application < Hanami::Application
     configure do
-      ##
-      # BASIC
-      #
 
       # Define the root path of this application.
       # All paths specified in this configuration are relative to path below.
-      #
       root __dir__
 
       # Relative load paths where this application will recursively load the code.
@@ -27,13 +23,9 @@ module Web
       #
       # handle_exceptions true
 
-      ##
       # HTTP
-      #
-
       # Routes definitions for this application
       # See: http://www.rubydoc.info/gems/hanami-router#Usage
-      #
       routes 'config/routes'
 
       # URI scheme used by the routing system to generate absolute URLs
@@ -41,15 +33,7 @@ module Web
       #
       # scheme 'https'
 
-      # URI host used by the routing system to generate absolute URLs
-      # Defaults to "localhost"
-      #
       # host 'example.org'
-
-      # URI port used by the routing system to generate absolute URLs
-      # Argument: An object coercible to integer, default to 80 if the scheme is http and 443 if it's https
-      # This SHOULD be configured only in case the application listens to that non standard ports
-      #
       # port 443
 
       # Enable cookies
@@ -71,9 +55,7 @@ module Web
       # Enable sessions
       # Argument: Symbol the Rack session adapter
       #           A Hash with options
-      #
       # See: http://www.rubydoc.info/gems/rack/Rack/Session/Cookie
-      #
       # sessions :cookie, secret: ENV['WEB_SESSIONS_SECRET']
 
       # Configure Rack middleware for this application
@@ -118,7 +100,7 @@ module Web
       # ASSETS
       #
       assets do
-        # JavaScript compressor
+        # compile false
         #
         # Supported engines:
         #
