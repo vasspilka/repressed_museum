@@ -4,5 +4,5 @@ web:
   volumes:
     - "/volume/logs/revine:/usr/src/app/log"
   ports:
-    - 2300:3000
+    - 2300:2300
   restart: always
