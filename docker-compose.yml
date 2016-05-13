@@ -1,0 +1,8 @@
+web:
+  build: .
+  command: hanami server
+  volumes:
+    - "/volume/logs/revine:/usr/src/app/log"
+  ports:
+    - 2300:3000
+  restart: always
