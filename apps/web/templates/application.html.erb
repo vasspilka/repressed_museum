@@ -1,27 +1,40 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Το Μουσείο Απωθημένων</title>
+    <title><%= title %></title>
     <%= stylesheet 'bulma' %>
     <%= favicon %>
   </head>
   <body>
-    <header>
-      <nav class="nav has-shadow">
-        <div class="container">
+    <div class="container">
+      <header>
+        <nav class="nav has-shadow">
           <div class="nav-left">
-            <a href="/" class="nav-item is-tab">LOREM</a>
+            <a href="/" class="nav-item is-tab"><%= index %></a>
           </div>
           <div class="nav-center">
-            <a href="/about" class="nav-item is-tab">Για το Μουσείο</a>
-            <a href="/archieve" class="nav-item is-tab">Φωτογραφικό Αρχείο</a>
-            <a href="/repress" class="nav-item is-tab">Κατάθεση Απωθημένων</a>
+            <a href="/about" class="nav-item is-tab"><%= about %></a>
+            <a href="/archieve" class="nav-item is-tab"><%= archieve %></a>
+            <a href="/repress" class="nav-item is-tab"><%= repress %></a>
+          </div>
+        </nav>
+      </header>
+      <div class="columns">
+        <%= yield %>
+      </div>
+      <footer class="footer">
+        <div class="container">
+          <div class="content has-text-centered">
+            <p>
+              Copyright 2004-2006
+            
+           
+
+
+            </p>
           </div>
         </div>
-      </nav>
-    </header>
-    <div class="container">
-      <%= yield %>
+      </footer>
     </div>
   </body>
 </html>

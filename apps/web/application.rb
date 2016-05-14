@@ -1,5 +1,6 @@
 require 'hanami/helpers'
 require 'hanami/assets'
+require_relative './controllers/locale'
 
 module Web
   class Application < Hanami::Application
@@ -20,9 +21,8 @@ module Web
       # Handle exceptions with HTTP statuses (true) or don't catch them (false).
       # Defaults to true.
       # See: http://www.rubydoc.info/gems/hanami-controller/#Exceptions_management
-      #
       # handle_exceptions true
-
+    
       # HTTP
       # Routes definitions for this application
       # See: http://www.rubydoc.info/gems/hanami-router#Usage
@@ -35,24 +35,9 @@ module Web
       # host 'example.org'
       # port 443
 
-      # Enable cookies
-      # Argument: boolean to toggle the feature
-      #           A Hash with options
-      # Options: :domain   - The domain (String - nil by default, not required)
-      #          :path     - Restrict cookies to a relative URI (String - nil by default)
-      #          :max_age  - Cookies expiration expressed in seconds (Integer - nil by default)
-      #          :secure   - Restrict cookies to secure connections
-      #                      (Boolean - Automatically set on true if currenlty using a secure connection)
-      #                      See #scheme and #ssl?
-      #          :httponly - Prevent JavaScript access (Boolean - true by default)
-      #
-      # cookies true
-
-      # Enable sessions
-      # Argument: Symbol the Rack session adapter
-      #           A Hash with options
       # See: http://www.rubydoc.info/gems/rack/Rack/Session/Cookie
-      # sessions :cookie, secret: ENV['WEB_SESSIONS_SECRET']
+      cookies true
+      sessions :cookie, secret: ENV['WEB_SESSIONS_SECRET']
 
       # Configure Rack middleware for this application
       # middleware.use Rack::Protection
@@ -64,11 +49,6 @@ module Web
       #
       # body_parsers :json
 
-      # When it's true and the router receives a non-encrypted request (http),
-      # it redirects to the secure equivalent resource (https). Default disabled.
-      #
-      # force_ssl true
-
 
       layout :application # It will load Web::Views::ApplicationLayout
       templates 'templates'
@@ -76,11 +56,8 @@ module Web
       assets do
         # compile false
         javascript_compressor :builtin
-
         stylesheet_compressor :builtin
 
-        # Specify sources for assets
-        #
         sources << [
           'assets'
         ]
@@ -93,13 +70,11 @@ module Web
 
       # See: http://www.rubydoc.info/gems/hanami-controller#Configuration
       controller.prepare do
+        include Web::Locale
         # include MyAuthentication # included in all the actions
         # before :authenticate!    # run an authentication before callback
       end
 
-      # Configure the code that will yield each time Web::View is included
-      # This is useful for sharing common functionality
-      #
       # See: http://www.rubydoc.info/gems/hanami-view#Configuration
       view.prepare do
         include Hanami::Helpers
@@ -123,20 +98,13 @@ module Web
       # port   443
 
       assets do
-        # Don't compile static assets in production mode (eg. Sass, ES6)
-        #
         # See: http://www.rubydoc.info/gems/hanami-assets#Configuration
         compile false
 
-        # Use digest file name for asset paths
-        #
         # See: http://hanamirb.org/guides/assets/digest
         digest  true
 
-        # Content Delivery Network (CDN)
-        #
         # See: http://hanamirb.org/guides/assets/content-delivery-network
-        #
         # scheme 'https'
         # host   'cdn.example.org'
         # port   443
