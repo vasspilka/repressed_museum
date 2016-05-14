@@ -33,5 +33,13 @@ gr:
           '
 
 en:
-  title:
+  title: Το Μουσείο Απωθημένων
+  nav:
+    index: Αρχική
+    about: Για το Μουσείο
+    archieve: Φωτογραφικό Αρχείο
+    repress: Κατάθεση Απωθημένων
   about:
+    title: Για το Μουσείο
+    text_body: |
+      'nothin'
