@@ -33,13 +33,13 @@ gr:
           '
 
 en:
-  title: Το Μουσείο Απωθημένων
+  title: Repress Museum 
   nav:
-    index: Αρχική
-    about: Για το Μουσείο
-    archieve: Φωτογραφικό Αρχείο
-    repress: Κατάθεση Απωθημένων
+    index: Home
+    about: About the museum
+    archieve: Photo Archieve
+    repress: Submit a repress
   about:
-    title: Για το Μουσείο
+    title: About the museum
     text_body: |
       'nothin'
