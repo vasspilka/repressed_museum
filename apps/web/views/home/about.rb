@@ -8,7 +8,7 @@ module Web::Views::Home
 
 
     def text_body
-      locale["about"]["text_body"]
+      _raw locale["about"]["text_body"][1..-3].gsub(/[\n]/,"<br>")
     end
 
   end
