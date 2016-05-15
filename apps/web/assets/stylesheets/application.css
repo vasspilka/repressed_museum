@@ -2,3 +2,12 @@
   padding-left: 150px;
   padding-right: 150px;
 }
+
+.repress_form {
+  margin-top: 80px;
+}
+
+.repress_form textarea {
+  min-height: 200px;
+}
+
