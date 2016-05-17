@@ -1,0 +1,13 @@
+<% images.each_slice(3).to_a.each do |group| %>
+  <div class='tile is-ancestor'>
+    <% group.each do |i| %>
+      <div class='tile is-parent is-4'>
+        <div class='tile is-child'>
+        <figure class='image is-4by3'>
+          <img src='<%= i.image_path %>' >
+        </figure>
+        </div>
+      </div>
+    <% end %>
+  </div>
+<% end %>
