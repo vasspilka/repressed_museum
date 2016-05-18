@@ -11,3 +11,14 @@
   min-height: 200px;
 }
 
+.footer, body {
+  background: white;
+}
+
+img {
+  height:initial!important;
+  width:initial!important;
+  max-height:100%!important;
+  max-width:100%!important;
+  margin:auto!important;
+}
