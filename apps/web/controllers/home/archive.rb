@@ -1,5 +1,5 @@
 module Web::Controllers::Home
-  class Archieve
+  class Archive
     include Web::Action
     expose :images
 

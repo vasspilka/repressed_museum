@@ -3,7 +3,7 @@ gr:
   nav:
     index: Αρχική
     about: Για το Μουσείο
-    archieve: Φωτογραφικό Αρχείο
+    archive: Φωτογραφικό Αρχείο
     repress: Κατάθεση Απωθημένων
   about:
     title: Για το Μουσείο
@@ -34,7 +34,7 @@ en:
   nav:
     index: Home
     about: About the museum
-    archieve: Photo Archieve
+    archive: Photo Archive
     repress: Submit a repress
   about:
     title: About the museum

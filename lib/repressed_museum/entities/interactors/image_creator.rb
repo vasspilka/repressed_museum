@@ -1,5 +1,5 @@
 class ImageCreator
-  IMAGE_PATH = './apps/web/assets/images/archieve/*.jpg'
+  IMAGE_PATH = './apps/web/assets/images/archive/*.jpg'
   class << self
     def create_images
       images.map { |name| Image.new(title: name) }

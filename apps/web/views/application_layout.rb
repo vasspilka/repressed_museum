@@ -16,8 +16,8 @@ module Web
         locale["nav"]["about"]
       end
 
-      def archieve
-        locale["nav"]["archieve"]
+      def archive
+        locale["nav"]["archive"]
       end
 
       def repress

@@ -1,5 +1,5 @@
 module Web::Views::Home
-  class Archieve
+  class Archive
     include Web::View
 
   end

@@ -1,8 +1,8 @@
-require_relative '../../../../apps/web/views/home/archieve'
+require_relative '../../../../apps/web/views/home/archive'
 
-RSpec.describe Web::Views::Home::Archieve do
+RSpec.describe Web::Views::Home::Archive do
   let(:exposures) { Hash[foo: 'bar'] }
-  let(:template)  { Hanami::View::Template.new('apps/web/templates/home/archieve.html.erb') }
+  let(:template)  { Hanami::View::Template.new('apps/web/templates/home/archive.html.erb') }
   let(:view)      { described_class.new(template, exposures) }
   let(:rendered)  { view.render }
 

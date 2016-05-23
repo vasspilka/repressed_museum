@@ -1,6 +1,6 @@
-get '/',         to: 'home#index'
-get '/about',    to: 'home#about'
-get '/archieve', to: 'home#archieve'
+get '/',          to: 'home#index'
+get '/about',     to: 'home#about'
+get '/archive',   to: 'home#archive'
 get '/locale/en', to: 'locale#en'
 get '/locale/gr', to: 'locale#gr'
 
