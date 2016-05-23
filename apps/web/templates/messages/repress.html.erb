@@ -1,21 +1,3 @@
 <div class='column is-half is-offset-one-quarter repress_form'>
-<%=
-  form_for :message, '/messages' do
-
-    div class: 'controls' do
-      label      :title, class: 'label'
-      text_field :title, class: 'input'
-    end
-
-    div class: 'controls' do
-      label      :text, class: 'label'
-      text_area  :text, class: 'input'
-    end
-
-    div class: 'controls' do
-      submit 'Στείλε αποθημένο', class: 'button'
-    end
-
-  end
-%>
+  <%= form %>
 </div>

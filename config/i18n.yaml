@@ -5,6 +5,10 @@ gr:
     about: Για το Μουσείο
     archive: Φωτογραφικό Αρχείο
     repress: Κατάθεση Απωθημένων
+  form:
+    title: Τίτλος
+    text: Κείμενο
+    submit: Στείλε αποθημένο 
   about:
     title: Για το Μουσείο
     text_body: |
@@ -36,7 +40,11 @@ en:
     about: About the museum
     archive: Photo Archive
     repress: Submit a repress
+  form:
+    title: Title
+    text: Text
+    submit: Send
   about:
     title: About the museum
     text_body: |
-      'nothin'
+      ''
