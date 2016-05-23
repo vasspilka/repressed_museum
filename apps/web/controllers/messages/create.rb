@@ -11,7 +11,8 @@ module Web::Controllers::Messages
 
     def call(params)
       MessageRepository.create Message.new(message_params)
-      redirect_to '/'
+      self.status = 405
+      self.body   = 'Error 405: Authority undefined'
     end
 
     private
