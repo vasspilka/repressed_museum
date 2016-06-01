@@ -1,4 +1,5 @@
-require_relative 'interactors/image_creator'
+require_relative '../interactors/image_creator'
+
 class Image
   include Hanami::Entity
 
@@ -8,7 +9,7 @@ class Image
     ImageCreator.create_images
   end
 
-  def image_path
+  def path
     "/assets/#{title}"
   end
 
